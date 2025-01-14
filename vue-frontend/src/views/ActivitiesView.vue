@@ -12,6 +12,7 @@
       >
         <img :src="activity.image" :alt="activity.title" />
         <h3>{{ activity.title }}</h3>
+        <p v-if="suppliersById[activity.supplierId]" class="supplier"><i>by</i> {{ suppliersById[activity.supplierId].name }}</p>
         <p>{{ activity.description }}</p>
         <p>Price: {{ activity.currency }}{{ activity.price }}</p>
         <p>Rating: {{ activity.rating }}</p>
@@ -19,7 +20,8 @@
         <button @click="applyDiscount(activity)">Apply Discount</button>
       </div>
     </div>
-  </template>
+  </div>
+</template>
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
@@ -64,7 +66,10 @@ const applyDiscount = (activity) => {
   activity.price = activity.price * 0.9;
 };
 
-onMounted(fetchActivities);
+onMounted(async () => {
+  await fetchActivities();
+  await fetchSuppliers();
+});
 </script>
 
 <style scoped>
@@ -94,6 +99,9 @@ onMounted(fetchActivities);
 }
 .activity-card p {
   margin: 0;
+}
+.activity-card .supplier {
+  margin-bottom: 4px;
 }
 .search-input{
   background: transparent;

@@ -1,4 +1,4 @@
-import { Activity } from "@/types/activity";
+import { type Activity } from "@/types/activity";
 
 export default {
     async getActivities(): Promise<Activity[]> {
