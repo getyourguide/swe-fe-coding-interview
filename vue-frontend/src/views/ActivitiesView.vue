@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>Activities</h1>
+    <input type="text" v-model="searchQuery" placeholder="Search activities..." class="search-input"/>
     <div v-if="error" class="error">{{ error }}</div>
     <div v-else-if="loading" class="loading">Loading...</div>
     <div v-else class="activities">
@@ -27,6 +28,7 @@ import ActivityService from "../services/activity";
 const activities = ref([]);
 const loading = ref(true);
 const error = ref(null);
+const searchQuery = ref('');
 
 const fetchActivities = async () => {
   try {
@@ -69,5 +71,18 @@ onMounted(fetchActivities);
 }
 .activity-card p {
   margin: 0;
+}
+.search-input{
+  background: transparent;
+  padding: 8px;
+  width: 100%;
+  height: 56px;
+  cursor: text;
+  border-color: #ccc;
+  border-radius: 8px;
+  border-style: ridge;
+  color: #ccc;
+  font-size: medium;
+  margin: 16px;
 }
 </style>
