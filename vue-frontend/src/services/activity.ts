@@ -4,7 +4,7 @@ export default {
         const dataSource = Math.random() > 0.5 ? '/activities.json' : '/activitiesV2.json';
         const response = await fetch(dataSource);
         if (!response.ok) {
-          throw new Error('Failed to fetch activities');
+          throw new Error(`API Error: ${response.statusText}`);
         }
         const data = await response.json();
         await new Promise(resolve => setTimeout(resolve, Math.random() * 2000));

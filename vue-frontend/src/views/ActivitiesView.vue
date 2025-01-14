@@ -16,6 +16,7 @@
         <p>Price: {{ activity.currency }}{{ activity.price }}</p>
         <p>Rating: {{ activity.rating }}</p>
         <p v-if="activity.specialOffer">Special Offer!</p>
+        <button @click="applyDiscount(activity)">Apply Discount</button>
       </div>
     </div>
   </div>
@@ -39,6 +40,10 @@ const fetchActivities = async () => {
   } finally {
     loading.value = false;
   }
+};
+
+const applyDiscount = (activity) => {
+  activity.price = activity.price * 0.9;
 };
 
 onMounted(fetchActivities);
