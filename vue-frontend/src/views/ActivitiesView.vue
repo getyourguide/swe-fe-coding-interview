@@ -12,6 +12,7 @@
       >
         <img :src="activity.image" :alt="activity.title" />
         <h3>{{ activity.title }}</h3>
+        <p v-if="suppliersById[activity.supplierId]" class="supplier"><i>by</i> {{ suppliersById[activity.supplierId].name }}</p>
         <p>{{ activity.description }}</p>
         <p>Price: {{ activity.currency }}{{ activity.price }}</p>
         <p>Rating: {{ activity.rating }}</p>
@@ -22,21 +23,40 @@
   </div>
 </template>
 
-<script setup>
-import { ref, onMounted } from "vue";
-import ActivityService from "../services/activity";
+<script setup lang="ts">
+import { ref, onMounted } from 'vue';
+import ActivityCard from '../components/ActivityCard.vue';
+import ActivityService from '../services/activity';
+import { getSuppliers, validateSupplier } from '../services/suppliers';
+import type { Activity } from '@/types/activity';
+import type { Supplier } from '@/types/supplier';
 
-const activities = ref([]);
+const activities = ref<Activity[]>([]);
+const suppliersById = ref<Record<number, Supplier>>({});
 const loading = ref(true);
 const error = ref(null);
-const searchQuery = ref('');
 
 const fetchActivities = async () => {
   try {
     loading.value = true;
     activities.value = await ActivityService.getActivities();
   } catch (err) {
-    error.value = err.message;
+    error.value = (err as any)?.message;
+  } finally {
+    loading.value = false;
+  }
+};
+
+const fetchSuppliers = async () => {
+  try {
+    loading.value = true;
+    const suppliers = await getSuppliers();
+    suppliers.forEach((supplier) => {
+      validateSupplier(supplier);
+      suppliersById.value[supplier.id] = supplier;
+    });
+  } catch (err) {
+    error.value = (err as any)?.message;
   } finally {
     loading.value = false;
   }
@@ -46,7 +66,10 @@ const applyDiscount = (activity) => {
   activity.price = activity.price * 0.9;
 };
 
-onMounted(fetchActivities);
+onMounted(async () => {
+  await fetchActivities();
+  await fetchSuppliers();
+});
 </script>
 
 <style scoped>
@@ -76,6 +99,9 @@ onMounted(fetchActivities);
 }
 .activity-card p {
   margin: 0;
+}
+.activity-card .supplier {
+  margin-bottom: 4px;
 }
 .search-input{
   background: transparent;
