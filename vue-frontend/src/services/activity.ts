@@ -1,5 +1,7 @@
+import { Activity } from "@/types/activity";
+
 export default {
-    async getActivities() {
+    async getActivities(): Promise<Activity[]> {
       try {
         const dataSource = Math.random() > 0.5 ? '/activities.json' : '/activitiesV2.json';
         const response = await fetch(dataSource);
@@ -12,11 +14,10 @@ export default {
         if (data.some(activity => activity.supplierId > 200)) {
           activities = data;
         }
-        return  activities;
+        return activities as Activity[];
       } catch (error) {
         console.error('Error fetching activities:', error);
         throw error;
       }
     }
   };
-  
