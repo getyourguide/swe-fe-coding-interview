@@ -1,9 +1,9 @@
+import { SUPPLIERS_ENDPOINT } from "@/internal/constants";
 import { type Supplier } from "@/types/supplier";
 
 export async function getSuppliers(): Promise<Supplier[]> {
   try {
-    const dataSource = '/suppliers.json';
-    const response = await fetch(dataSource);
+    const response = await fetch(SUPPLIERS_ENDPOINT);
     if (!response.ok) {
       throw new Error('Failed to fetch suppliers');
     }
