@@ -13,7 +13,6 @@
         <img :src="activity.image" :alt="activity.title" />
         <h3>{{ activity.title }}</h3>
         <p v-if="suppliersById[activity.supplierId]" class="supplier"><i>by</i> {{ suppliersById[activity.supplierId].name }}</p>
-        <p>{{ activity.description }}</p>
         <p>Price: {{ activity.currency }}{{ activity.price }}</p>
         <p>Rating: {{ activity.rating }}</p>
         <p v-if="activity.specialOffer">Special Offer!</p>
@@ -25,7 +24,6 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import ActivityCard from '../components/ActivityCard.vue';
 import ActivityService from '../services/activity';
 import { getSuppliers, validateSupplier } from '../services/suppliers';
 import type { Activity } from '@/types/activity';
