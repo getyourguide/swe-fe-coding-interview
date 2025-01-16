@@ -6,40 +6,27 @@
 - We are looking for people who are able to work on a variety of projects and technologies.
 - We are not explicitly looking for expertise in a specific technology or domain. An ideal candidate would be able to work with a variety of technologies.
 
-We would like you to build a web application that allows users to search for activities.
-The project is meant to be a simple application that you can build in a few hours.
-We are not looking for a production-ready application but we will assess your project both in terms of quality (user experience/use of best practices/robust architecture) and potential (scalability).
-
-In this repository you will find a list of activities that you can use to build your application (please find the file `activities.json` in the `spring-boot-service/src/main/resources/static` folder).
-
-We bootstrapped in advance 2 skeleton applications for the back end and the front end: you will find a skeleton SpringBoot backend application and a VueJS frontend application.
-
-You can use them to speed up the implementation, or you can start from scratch choosing the technologies you are most familiar with, or you think most appropriate to fulfill the requirements.
+We would like you to setup this application on your local environment, we will give you some challenges to implement during our interview on this codebase.
 
 # Requirements
 
+- Please make sure you have [Node.js](https://nodejs.org/) version 18.3 or higher
+- Please ensure that the FULL project can be run in your local environment
+- ⚠️ **Make sure not to publish your work on this repository.** ⚠️
 
-- Please ensure that the FULL project can be run locally with the given Docker compose file with `docker compose up --build`. Modify, add any dependencies as required
 
-# How to submit your work
+## Project Setup
+1. Install pnpm globally
+```sh
+npm install -g pnpm@9.4.0
+```
+2. Install dependecies using pnpm
+```sh
+pnpm install
+```
 
-Please clone this repository and send us a zip file containing your work.
-
-Also, please avoid bundling `node_modules` or other installed dependency directories in your zip file.
-
-⚠️ **Make sure not to publish your work on a public repository.** ⚠️
-
-We will grade your project after submission and eventually invite you for a remote live interview with our engineers.
-
-Depending on the role you are applying for and your level of expertise, you have the flexibility to put a stronger focus in the implementation of either the backend or the client application. We require submissions to have basic functionality on the side of the stack you are less familiar with, however you are welcome to focus your efforts on your focus area, allowing us to assess your skills in your preferred domain.
-
-If you opt for this approach, please specify in your notes which application you would like us to thoroughly review. Alternatively, if you feel confident in both the backend and client application, we encourage you to state clearly in your notes that you would like a comprehensive review of both. We are excited to thoroughly evaluate your work across the entire stack.
-
-Creativity is also encouraged, and while we do not expect you to add a lot more on top of the basic requirements you have freedom to showcase your skills.
-
-# Presentation
-
-- We will ask you to present your work. Please be prepared to present your work, demo it, and explain your choices.
-- We will ask clarifying questions about your code and your design choices.
-- In addition to the presentation we will ask you to refactor the code, add features, or fix bugs:
-  please be prepared to share your screen during the interview and to code live with us.
+### Compile and Hot-Reload for Development
+3. Make sure you are able to run dev mode of application without any compile/runtime errors
+```sh
+pnpm dev
+```
