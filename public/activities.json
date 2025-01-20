@@ -7,7 +7,13 @@
       "currency": "$",
       "rating": 4.8,
       "specialOffer": false,
-      "supplierId": 1
+      "supplierId": 1,
+      "discounts": [
+        {
+          "type": "percentage",
+          "value": 10
+        }
+      ]
     },
     {
       "id": 6960,
@@ -17,7 +23,13 @@
       "currency": "$",
       "rating": 4.8,
       "specialOffer": false,
-      "supplierId": 2
+      "supplierId": 2,
+      "discounts": [
+        {
+          "type": "fixed",
+          "value": 5
+        }
+      ]
     },
     {
       "id": 80426,
@@ -27,7 +39,13 @@
       "currency": "$",
       "rating": 4.6,
       "specialOffer": false,
-      "supplierId": 2
+      "supplierId": 2,
+      "discounts": [
+        {
+          "type": "fixed",
+          "value": 2
+        }
+      ]
     },
     {
       "id": 23113,
@@ -37,7 +55,13 @@
       "currency": "$",
       "rating": 4.6,
       "specialOffer": false,
-      "supplierId": 2
+      "supplierId": 2,
+      "discounts": [
+        {
+          "type": "percentage",
+          "value": 10
+        }
+      ]
     },
     {
       "id": 26093,
@@ -47,7 +71,13 @@
       "currency": "$",
       "rating": 4.5,
       "specialOffer": false,
-      "supplierId": 1
+      "supplierId": 1,
+      "discounts": [
+        {
+          "type": "fixed",
+          "value": 2
+        }
+      ]
     },
     {
       "id": 97470,
@@ -57,7 +87,13 @@
       "currency": "$",
       "rating": 4.3,
       "specialOffer": false,
-      "supplierId": 200
+      "supplierId": 200,
+      "discounts": [
+        {
+          "type": "percentage",
+          "value": 10
+        }
+      ]
     },
     {
       "id": 15647,
@@ -67,7 +103,13 @@
       "currency": "$",
       "rating": 4.8,
       "specialOffer": false,
-      "supplierId": 250
+      "supplierId": 250,
+      "discounts": [
+        {
+          "type": "fixed",
+          "value": 5
+        }
+      ]
     },
     {
       "id": 26823,
@@ -77,7 +119,13 @@
       "currency": "$",
       "rating": 4.5,
       "specialOffer": true,
-      "supplierId": 1
+      "supplierId": 1,
+      "discounts": [
+        {
+          "type": "percentage",
+          "value": 10
+        }
+      ]
     },
     {
       "id": 58351,
@@ -87,7 +135,13 @@
       "currency": "$",
       "rating": 4.5,
       "specialOffer": false,
-      "supplierId": 250
+      "supplierId": 250,
+      "discounts": [
+        {
+          "type": "fixed",
+          "value": 2
+        }
+      ]
     },
     {
       "id": 75009,
@@ -97,7 +151,13 @@
       "currency": "$",
       "rating": 4.6,
       "specialOffer": true,
-      "supplierId": 2
+      "supplierId": 2,
+      "discounts": [
+        {
+          "type": "percentage",
+          "value": 12
+        }
+      ]
     },
     {
       "id": 19340,
@@ -107,7 +167,13 @@
       "currency": "$",
       "rating": 4.9,
       "specialOffer": true,
-      "supplierId": 250
+      "supplierId": 250,
+      "discounts": [
+        {
+          "type": "fixed",
+          "value": 5
+        }
+      ]
     },
     {
       "id": 13399,
@@ -117,7 +183,12 @@
       "currency": "$",
       "rating": 4.8,
       "specialOffer": false,
-      "supplierId": 200
+      "supplierId": 200,
+      "discounts": [
+        {
+          "type": "bogo"
+        }
+      ]
     },
     {
       "id": 86150,
@@ -127,7 +198,13 @@
       "currency": "$",
       "rating": 4.3,
       "specialOffer": false,
-      "supplierId": 1
+      "supplierId": 1,
+      "discounts": [
+        {
+          "type": "fixed",
+          "value": 2
+        }
+      ]
     },
     {
       "id": 40881,
@@ -137,6 +214,11 @@
       "currency": "$",
       "rating": 4.5,
       "specialOffer": false,
-      "supplierId": 2
+      "supplierId": 2,
+      "discounts": [
+        {
+          "type": "bogo"
+        }
+      ]
     }
   ]

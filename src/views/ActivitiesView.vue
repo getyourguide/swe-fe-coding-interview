@@ -33,6 +33,7 @@ const activities = ref<Activity[]>([]);
 const suppliersById = ref<Record<number, Supplier>>({});
 const loading = ref(true);
 const error = ref(null);
+const searchQuery = ref('');
 
 const fetchActivities = async () => {
   try {
@@ -61,7 +62,11 @@ const fetchSuppliers = async () => {
 };
 
 const applyDiscount = (activity) => {
-  activity.price = activity.price * 0.9;
+  activity.price = calculateDiscountedPrice(activity.price, activity.discounts);
+};
+
+const calculateDiscountedPrice = (originalPrice: number, discounts: Activity['discounts']) => {
+return originalPrice;
 };
 
 onMounted(async () => {
