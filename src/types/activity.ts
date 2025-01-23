@@ -1,7 +1,5 @@
-export interface Discount {
-  type: "percentage" | "fixed" | "bogo";
-  value?: number | string;
-}
+import type { Discount } from "./discount";
+
 
 export interface Activity {
   id: number;

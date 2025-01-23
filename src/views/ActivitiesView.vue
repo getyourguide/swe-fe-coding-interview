@@ -1,7 +1,12 @@
 <template>
   <div>
     <h1>Activities</h1>
-    <input type="text" v-model="searchQuery" placeholder="Search activities..." class="search-input"/>
+    <input
+      type="text"
+      v-model="searchQuery"
+      placeholder="Search activities..."
+      class="search-input"
+    />
     <div v-if="error" class="error">{{ error }}</div>
     <div v-else-if="loading" class="loading">Loading...</div>
     <div v-else class="activities">
@@ -12,11 +17,12 @@
       >
         <img :src="activity.image" :alt="activity.title" />
         <h3>{{ activity.title }}</h3>
-        <p v-if="suppliersById[activity.supplierId]" class="supplier"><i>by</i> {{ suppliersById[activity.supplierId].name }}</p>
+        <p v-if="suppliersById[activity.supplierId]" class="supplier">
+          <i>by</i> {{ suppliersById[activity.supplierId].name }}
+        </p>
         <p>Price: {{ activity.currency }}{{ activity.price }}</p>
         <p>Rating: {{ activity.rating }}</p>
         <p v-if="activity.specialOffer">Special Offer!</p>
-        <button @click="applyDiscount(activity)">Apply Discount</button>
       </div>
     </div>
   </div>
@@ -61,14 +67,6 @@ const fetchSuppliers = async () => {
   }
 };
 
-const applyDiscount = (activity) => {
-  activity.price = calculateDiscountedPrice(activity.price, activity.discounts);
-};
-
-const calculateDiscountedPrice = (originalPrice: number, discounts: Activity['discounts']) => {
-return originalPrice;
-};
-
 onMounted(async () => {
   await fetchActivities();
   await fetchSuppliers();
@@ -106,7 +104,7 @@ onMounted(async () => {
 .activity-card .supplier {
   margin-bottom: 4px;
 }
-.search-input{
+.search-input {
   background: transparent;
   padding: 8px;
   width: 100%;
