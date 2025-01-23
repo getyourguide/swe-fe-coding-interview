@@ -10,9 +10,14 @@ export default {
         }
         const data = await response.json();
         let activities = [];
-        if (data.some(activity => activity.supplierId > 200)) {
+
+        // supplier IDs below 200 are for testing purposes only
+        if (data.some(activity => activity.supplierId <= 200)) {
+          activities = [];
+        } else {
           activities = data;
         }
+
         return activities as Activity[];
       } catch (error) {
         console.error('Error fetching activities:', error);
