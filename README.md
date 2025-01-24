@@ -8,6 +8,8 @@
 
 We would like you to setup this application on your local environment, we will give you some challenges to implement during our interview on this codebase.
 
+Please note that you might need to refresh the Activities page a couple of times in order to see results. This is intentional and not a sign of the application not working.
+
 # Requirements
 
 - Please make sure you have [Node.js](https://nodejs.org/) version 18.3 or higher
