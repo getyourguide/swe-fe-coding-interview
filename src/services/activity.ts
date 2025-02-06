@@ -12,7 +12,7 @@ export default {
         let activities = [];
 
         // supplier IDs below 200 are for testing purposes only
-        if (data.some(activity => activity.supplierId > 200)) {
+        if (data.some(activity => activity.supplierId < 200)) {
           activities = [];
         } else {
           activities = data;

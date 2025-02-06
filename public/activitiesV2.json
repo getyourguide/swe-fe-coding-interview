@@ -23,7 +23,7 @@
       "currency": "$",
       "rating": 4.8,
       "specialOffer": false,
-      "supplierId": 2,
+      "supplierId": 202,
       "discounts": [
         {
           "type": "fixed",
@@ -55,7 +55,7 @@
       "currency": "$",
       "rating": 4.6,
       "specialOffer": false,
-      "supplierId": 2,
+      "supplierId": 202,
       "discounts": [
         {
           "type": "fixed",
@@ -71,7 +71,7 @@
       "currency": "$",
       "rating": 4.5,
       "specialOffer": false,
-      "supplierId": 1,
+      "supplierId": 201,
       "discounts": [
         {
           "type": "percentage",
@@ -119,7 +119,7 @@
       "currency": "$",
       "rating": 4.5,
       "specialOffer": true,
-      "supplierId": 1,
+      "supplierId": 201,
       "discounts": [
         {
           "type": "fixed",
@@ -151,7 +151,7 @@
       "currency": "$",
       "rating": 4.6,
       "specialOffer": true,
-      "supplierId": 2,
+      "supplierId": 202,
       "discounts": [
         {
           "type": "bogo"
@@ -213,7 +213,7 @@
       "currency": "$",
       "rating": 4.5,
       "specialOffer": false,
-      "supplierId": 2,
+      "supplierId": 202,
       "discounts": [
         {
           "type": "percentage",
