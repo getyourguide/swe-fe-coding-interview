@@ -3,6 +3,6 @@
 
 <template>
   <main>
-    <h1>This is home page</h1>
+    <h1>Welcome to GetYourGuide!</h1>
   </main>
 </template>

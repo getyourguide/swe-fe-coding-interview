@@ -1,12 +1,19 @@
+import { NEW_ACTIVITIES_ENDPOINT } from "./constants";
+
 const F = window.fetch;
 
 export const fetchWrapper: typeof window.fetch = async (...args: Parameters<typeof fetch>): Promise<Response> => {
   await new Promise(resolve => setTimeout(resolve, Math.random() * 1000));
 
-  const dieRoll = Math.random();
   const res = await F(...args);
 
-  if (dieRoll > 0.1) {
+  if (args[0] !== NEW_ACTIVITIES_ENDPOINT) {
+    return res;
+  }
+
+  const dieRoll = Math.random();
+
+  if (dieRoll > 0.5) {
     return res;
   }
 
@@ -17,7 +24,7 @@ export const fetchWrapper: typeof window.fetch = async (...args: Parameters<type
   };
 
 
-  if (dieRoll > 0.07) {
+  if (dieRoll > 0.3) {
     return {
       ...mockResponse,
       status: 500,
@@ -25,7 +32,7 @@ export const fetchWrapper: typeof window.fetch = async (...args: Parameters<type
     }
   }
 
-  if (dieRoll > 0.04) {
+  if (dieRoll > 0.2) {
     return {
       ...mockResponse,
       status: 403,

@@ -20,7 +20,8 @@
         <p v-if="suppliersById[activity.supplierId]" class="supplier">
           <i>by</i> {{ suppliersById[activity.supplierId].name }}
         </p>
-        <p>Price: {{ activity.currency }}{{ activity.price }}</p>
+        <p v-if="activity.discounts?.length">Price: <s>{{ activity.currency }}{{ activity.price }}</s> {{ activity.currency }}{{ calculateDiscountedPrice(activity.price, activity.discounts) }}</p>
+        <p v-else>Price: {{ activity.currency }}{{ activity.price }}</p>
         <p>Rating: {{ activity.rating }}</p>
         <p v-if="activity.specialOffer">Special Offer!</p>
       </div>
@@ -32,8 +33,16 @@
 import { ref, onMounted } from 'vue';
 import ActivityService from '../services/activity';
 import { getSuppliers, validateSupplier } from '../services/suppliers';
-import type { Activity } from '@/types/activity';
+import type { ActivitiesType, Activity } from '@/types/activity';
 import type { Supplier } from '@/types/supplier';
+import { calculateDiscountedPrice } from '@/utils/discount-calculator';
+
+
+type ActivitiesProps = {
+  type: ActivitiesType;
+}
+
+const props = defineProps<ActivitiesProps>();
 
 const activities = ref<Activity[]>([]);
 const suppliersById = ref<Record<number, Supplier>>({});
@@ -44,7 +53,7 @@ const searchQuery = ref('');
 const fetchActivities = async () => {
   try {
     loading.value = true;
-    activities.value = await ActivityService.getActivities();
+    activities.value = await ActivityService.getActivities(props.type);
   } catch (err) {
     error.value = (err as any)?.message;
   } finally {

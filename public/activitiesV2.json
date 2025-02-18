@@ -40,12 +40,7 @@
       "rating": 4.6,
       "specialOffer": false,
       "supplierId": 2,
-      "discounts": [
-        {
-          "type": "fixed",
-          "value": 2
-        }
-      ]
+      "discounts": []
     },
     {
       "id": 23113,
@@ -56,12 +51,7 @@
       "rating": 4.6,
       "specialOffer": false,
       "supplierId": 202,
-      "discounts": [
-        {
-          "type": "fixed",
-          "value": 10
-        }
-      ]
+      "discounts": []
     },
     {
       "id": 26093,
@@ -72,12 +62,7 @@
       "rating": 4.5,
       "specialOffer": false,
       "supplierId": 201,
-      "discounts": [
-        {
-          "type": "percentage",
-          "value": 5
-        }
-      ]
+      "discounts": []
     },
     {
       "id": 97470,
@@ -88,12 +73,7 @@
       "rating": 4.3,
       "specialOffer": false,
       "supplierId": 200,
-      "discounts": [
-        {
-          "type": "fixed",
-          "value": 10
-        }
-      ]
+      "discounts": []
     },
     {
       "id": 15647,
@@ -104,12 +84,7 @@
       "rating": 4.8,
       "specialOffer": false,
       "supplierId": 200,
-      "discounts": [
-        {
-          "type": "percentage",
-          "value": 5
-        }
-      ]
+      "discounts": []
     },
     {
       "id": 26823,
@@ -120,12 +95,7 @@
       "rating": 4.5,
       "specialOffer": true,
       "supplierId": 201,
-      "discounts": [
-        {
-          "type": "fixed",
-          "value": 10
-        }
-      ]
+      "discounts": []
     },
     {
       "id": 58351,
@@ -136,12 +106,7 @@
       "rating": 4.5,
       "specialOffer": false,
       "supplierId": 200,
-      "discounts": [
-        {
-          "type": "percentage",
-          "value": 5
-        }
-      ]
+      "discounts": []
     },
     {
       "id": 75009,
@@ -154,7 +119,7 @@
       "supplierId": 202,
       "discounts": [
         {
-          "type": "bogo"
+          "type": "buy-one-get-one-free"
         }
       ]
     },
@@ -183,11 +148,7 @@
       "rating": 4.8,
       "specialOffer": false,
       "supplierId": 200,
-      "discounts": [
-        {
-          "type": "bogo"
-        }
-      ]
+      "discounts": []
     },
     {
       "id": 86150,
@@ -198,12 +159,7 @@
       "rating": 4.3,
       "specialOffer": false,
       "supplierId": 1,
-      "discounts": [
-        {
-          "type": "fixed",
-          "value": 2
-        }
-      ]
+      "discounts": []
     },
     {
       "id": 40881,
@@ -214,11 +170,6 @@
       "rating": 4.5,
       "specialOffer": false,
       "supplierId": 202,
-      "discounts": [
-        {
-          "type": "percentage",
-          "value": 10
-        }
-      ]
+      "discounts": []
     }
   ]

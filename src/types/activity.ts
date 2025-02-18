@@ -1,6 +1,6 @@
 import type { Discount } from "./discount";
 
-
+export type ActivitiesType = "new" | "hot" | "offers";
 export interface Activity {
   id: number;
   title: string;
