@@ -18,17 +18,13 @@ Please note that you might need to refresh the Activities page a couple of times
 
 
 ## Project Setup
-1. Install pnpm globally
+1. Install dependencies using npm
 ```sh
-npm install -g pnpm@9.4.0
-```
-2. Install dependecies using pnpm
-```sh
-pnpm install
+npm install
 ```
 
 ### Compile and Hot-Reload for Development
-3. Make sure you are able to run dev mode of application without any compile/runtime errors
+2. Make sure you are able to run dev mode of application without any compile/runtime errors
 ```sh
-pnpm dev
+npm run dev
 ```

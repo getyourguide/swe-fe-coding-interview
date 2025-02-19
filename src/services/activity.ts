@@ -1,10 +1,18 @@
-import { ACTIVITIES_ENDPOINT } from "@/internal/constants";
-import { type Activity } from "@/types/activity";
+import { HOT_ACTIVITIES_ENDPOINT, NEW_ACTIVITIES_ENDPOINT, SPECIAL_OFFERS_ENDPOINT } from "@/internal/constants";
+import { type ActivitiesType, type Activity } from "@/types/activity";
+
+const endpoints = {
+  "new": NEW_ACTIVITIES_ENDPOINT,
+  "hot": HOT_ACTIVITIES_ENDPOINT,
+  "offers": SPECIAL_OFFERS_ENDPOINT,
+} as const;
 
 export default {
-    async getActivities(): Promise<Activity[]> {
+    async getActivities(type: ActivitiesType): Promise<Activity[]> {
+      const endpoint = endpoints[type];
+
       try {
-        const response = await fetch(ACTIVITIES_ENDPOINT);
+        const response = await fetch(endpoint);
         if (!response.ok) {
           throw new Error(`API Error: ${response.statusText}`);
         }

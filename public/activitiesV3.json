@@ -8,7 +8,16 @@
       "rating": 4.8,
       "specialOffer": false,
       "supplierId": 201,
-      "discounts": []
+      "discounts": [
+        {
+          "type": "percentage",
+          "value": 10
+        },
+        {
+          "type": "percentage",
+          "value": 10
+        }
+      ]
     },
     {
       "id": 6960,
@@ -19,7 +28,12 @@
       "rating": 4.8,
       "specialOffer": false,
       "supplierId": 202,
-      "discounts": []
+      "discounts": [
+        {
+          "type": "fixed",
+          "value": 5
+        }
+      ]
     },
     {
       "id": 80426,
@@ -30,7 +44,16 @@
       "rating": 4.6,
       "specialOffer": false,
       "supplierId": 202,
-      "discounts": []
+      "discounts": [
+        {
+          "type": "fixed",
+          "value": 2
+        },
+        {
+          "type": "percentage",
+          "value": 5
+        }
+      ]
     },
     {
       "id": 23113,
@@ -41,7 +64,12 @@
       "rating": 4.6,
       "specialOffer": false,
       "supplierId": 202,
-      "discounts": []
+      "discounts": [
+        {
+          "type": "percentage",
+          "value": 10
+        }
+      ]
     },
     {
       "id": 26093,
@@ -52,7 +80,12 @@
       "rating": 4.5,
       "specialOffer": false,
       "supplierId": 201,
-      "discounts": []
+      "discounts": [
+        {
+          "type": "fixed",
+          "value": 2
+        }
+      ]
     },
     {
       "id": 97470,
@@ -63,7 +96,12 @@
       "rating": 4.3,
       "specialOffer": false,
       "supplierId": 202,
-      "discounts": []
+      "discounts": [
+        {
+          "type": "percentage",
+          "value": 10
+        }
+      ]
     },
     {
       "id": 15647,
@@ -74,7 +112,12 @@
       "rating": 4.8,
       "specialOffer": false,
       "supplierId": 250,
-      "discounts": []
+      "discounts": [
+        {
+          "type": "fixed",
+          "value": 5
+        }
+      ]
     },
     {
       "id": 26823,
@@ -85,7 +128,16 @@
       "rating": 4.5,
       "specialOffer": true,
       "supplierId": 201,
-      "discounts": []
+      "discounts": [
+        {
+          "type": "percentage",
+          "value": 10
+        },
+        {
+          "type": "percentage",
+          "value": 5
+        }
+      ]
     },
     {
       "id": 58351,
@@ -96,7 +148,12 @@
       "rating": 4.5,
       "specialOffer": false,
       "supplierId": 250,
-      "discounts": []
+      "discounts": [
+        {
+          "type": "fixed",
+          "value": 2
+        }
+      ]
     },
     {
       "id": 75009,
@@ -107,7 +164,12 @@
       "rating": 4.6,
       "specialOffer": true,
       "supplierId": 202,
-      "discounts": []
+      "discounts": [
+        {
+          "type": "percentage",
+          "value": 12
+        }
+      ]
     },
     {
       "id": 19340,
@@ -118,7 +180,12 @@
       "rating": 4.9,
       "specialOffer": true,
       "supplierId": 250,
-      "discounts": []
+      "discounts": [
+        {
+          "type": "fixed",
+          "value": 5
+        }
+      ]
     },
     {
       "id": 13399,
@@ -129,7 +196,15 @@
       "rating": 4.8,
       "specialOffer": false,
       "supplierId": 200,
-      "discounts": []
+      "discounts": [
+        {
+          "type": "buy-one-get-one-free"
+        },
+        {
+          "type": "fixed",
+          "value": 10
+        }
+      ]
     },
     {
       "id": 86150,
@@ -140,7 +215,12 @@
       "rating": 4.3,
       "specialOffer": false,
       "supplierId": 201,
-      "discounts": []
+      "discounts": [
+        {
+          "type": "fixed",
+          "value": 2
+        }
+      ]
     },
     {
       "id": 40881,
@@ -151,6 +231,10 @@
       "rating": 4.5,
       "specialOffer": false,
       "supplierId": 202,
-      "discounts": []
+      "discounts": [
+        {
+          "type": "buy-one-get-one-free"
+        }
+      ]
     }
   ]

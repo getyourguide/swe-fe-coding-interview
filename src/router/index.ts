@@ -10,9 +10,10 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/activities',
+      path: '/activities/:type',
       name: 'activities',
       component: () => import('../views/ActivitiesView.vue'),
+      props: true
     },
   ],
 })

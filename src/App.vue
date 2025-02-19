@@ -1,13 +1,17 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView, useRoute } from 'vue-router'
+
+const route = useRoute();
 </script>
 
 <template>
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/activities">Activities</RouterLink>
+        <RouterLink to="/activities/new">New</RouterLink>
+        <RouterLink to="/activities/hot">Hot</RouterLink>
+        <RouterLink to="/activities/offers">Special Offers</RouterLink>
       </nav>
-  <RouterView />
+  <RouterView :key="route.fullPath" />
 </template>
 
 <style scoped>
