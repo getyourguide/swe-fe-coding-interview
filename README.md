@@ -26,5 +26,5 @@ npm install
 ### Compile and Hot-Reload for Development
 2. Make sure you are able to run dev mode of application without any compile/runtime errors
 ```sh
-npm dev
+npm run dev
 ```
