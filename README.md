@@ -18,13 +18,13 @@ Please note that you might need to refresh the Activities page a couple of times
 
 
 ## Project Setup
-2. Install dependecies using npm
+1. Install dependencies using npm
 ```sh
 npm install
 ```
 
 ### Compile and Hot-Reload for Development
-3. Make sure you are able to run dev mode of application without any compile/runtime errors
+2. Make sure you are able to run dev mode of application without any compile/runtime errors
 ```sh
 npm dev
 ```

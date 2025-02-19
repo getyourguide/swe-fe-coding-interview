@@ -1,21 +1,15 @@
 import { HOT_ACTIVITIES_ENDPOINT, NEW_ACTIVITIES_ENDPOINT, SPECIAL_OFFERS_ENDPOINT } from "@/internal/constants";
 import { type ActivitiesType, type Activity } from "@/types/activity";
 
+const endpoints = {
+  "new": NEW_ACTIVITIES_ENDPOINT,
+  "hot": HOT_ACTIVITIES_ENDPOINT,
+  "offers": SPECIAL_OFFERS_ENDPOINT,
+} as const;
+
 export default {
     async getActivities(type: ActivitiesType): Promise<Activity[]> {
-      let endpoint: string;
-
-      switch (type) {
-        case "new":
-          endpoint = NEW_ACTIVITIES_ENDPOINT;
-          break;
-        case "hot":
-          endpoint = HOT_ACTIVITIES_ENDPOINT;
-          break;
-        case "offers":
-          endpoint = SPECIAL_OFFERS_ENDPOINT;
-          break;
-      }
+      const endpoint = endpoints[type];
 
       try {
         const response = await fetch(endpoint);
