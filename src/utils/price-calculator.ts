@@ -1,7 +1,7 @@
 import type { CartItem } from "@/types/cart-item";
 
 /*
-  Example usage 1, 
+  Example usage 1,
   const items = [
     {
     priceBeforeTax: 19.99,
@@ -18,7 +18,7 @@ import type { CartItem } from "@/types/cart-item";
   ];
   const tax = 0.07;
   const total = calculateCartTotal(items, tax);
-  cosole.log(total); // { status: "success", total: "36.18" }
+  cosole.log(total); // { status: "success", total: "38.49" }
 
 
   --------------------------------------------
@@ -45,8 +45,8 @@ import type { CartItem } from "@/types/cart-item";
   const total = calculateCartTotal(items, tax);
   cosole.log(total); // { status: "error", message: "Cart has duplicate items" }
   */
-  
-  type CartTotalResult = 
+
+  type CartTotalResult =
   | { status: "success"; total: string }
   | { status: "error"; message: string };
 
