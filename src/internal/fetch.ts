@@ -1,3 +1,8 @@
+/**
+ * DO NOT MODIFY
+ * This file is a mock of the fetch function.
+ * It is used to simulate network errors. 
+ * */
 import { NEW_ACTIVITIES_ENDPOINT } from "./constants";
 
 const F = window.fetch;
@@ -48,3 +53,4 @@ export const fetchWrapper: typeof window.fetch = async (...args: Parameters<type
 };
 
 window.fetch = fetchWrapper;
+
