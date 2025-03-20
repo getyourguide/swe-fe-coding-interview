@@ -1,3 +1,4 @@
+import { getTax } from "@/utils/tax";
 import type { CartItem } from "@/types/cart-item";
 
 /*
@@ -16,8 +17,7 @@ import type { CartItem } from "@/types/cart-item";
     name: "Product 4",
     },
   ];
-  const tax = 0.07;
-  const total = calculateCartTotal(items, tax);
+  const total = calculateCartTotal(items);
   cosole.log(total); // { status: "success", total: "38.49" }
 
 
@@ -41,8 +41,7 @@ import type { CartItem } from "@/types/cart-item";
     name: "Product 4",
     },
   ];
-  const tax = 0.07;
-  const total = calculateCartTotal(items, tax);
+  const total = calculateCartTotal(items);
   cosole.log(total); // { status: "error", message: "Cart has duplicate items" }
   */
 
@@ -50,9 +49,11 @@ import type { CartItem } from "@/types/cart-item";
   | { status: "success"; total: string }
   | { status: "error"; message: string };
 
-export function calculateCartTotal(cartItems: CartItem[], tax?: number): CartTotalResult {
+export function calculateCartTotal(cartItems: CartItem[]): CartTotalResult {
+  const tax = getTax();
   return {
     status: "success",
     total: "0.00",
   };
 }
+
