@@ -1,17 +1,4 @@
 version: 2
-
-registries:
-  npm-codeartifact:
-    type: npm-registry
-    url: https://getyourguide-130607246975.d.codeartifact.eu-central-1.amazonaws.com/npm/private/
-    username: "aws"
-    password: "${{secrets.CODEARTIFACT_AUTH_TOKEN}}"
-  docker-registry-130607246975-dkr-ecr-eu-central-1-amazonaws-com:
-    type: docker-registry
-    url: https://130607246975.dkr.ecr.eu-central-1.amazonaws.com
-    username: "${{secrets.DOCKER_REGISTRY_130607246975_DKR_ECR_EU_CENTRAL_1_AMAZONAWS_COM_USERNAME}}"
-    password: "${{secrets.DOCKER_REGISTRY_130607246975_DKR_ECR_EU_CENTRAL_1_AMAZONAWS_COM_PASSWORD}}"
-
 updates:
   - package-ecosystem: npm
     directory: /
@@ -19,8 +6,6 @@ updates:
       interval: daily
       time: "08:00"
       timezone: Europe/Berlin
-    registries:
-      - npm-codeartifact
     labels: []
     open-pull-requests-limit: 30
     ignore:
@@ -50,8 +35,6 @@ updates:
     directory: /
     schedule:
       interval: weekly
-    registries:
-      - docker-registry-130607246975-dkr-ecr-eu-central-1-amazonaws-com
     commit-message:
       prefix: "[BUILD] "
     open-pull-requests-limit: 10
