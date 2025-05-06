@@ -15,8 +15,8 @@ importers:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.6.3)
       vue-router:
-        specifier: ^4.5.0
-        version: 4.5.0(vue@3.5.13(typescript@5.6.3))
+        specifier: ^4.5.1
+        version: 4.5.1(vue@3.5.13(typescript@5.6.3))
     devDependencies:
       '@tsconfig/node22':
         specifier: ^22.0.0
@@ -1528,8 +1528,8 @@ packages:
       '@vue/composition-api':
         optional: true
 
-  vue-router@4.5.0:
-    resolution: {integrity: sha512-HDuk+PuH5monfNuY+ct49mNmkCRK4xJAV9Ts4z9UFc4rzdDnxQLyCMGGc8pKhZhHTVzfanpNwB/lwqevcBwI4w==}
+  vue-router@4.5.1:
+    resolution: {integrity: sha512-ogAF3P97NPm8fJsE4by9dwSYtDwXIY1nFY9T6DyQnGHd1E2Da94w9JIolpe42LJGIl0DwOHBi8TcRPlPGwbTtw==}
     peerDependencies:
       vue: ^3.2.0
 
@@ -3057,7 +3057,7 @@ snapshots:
     dependencies:
       vue: 3.5.13(typescript@5.6.3)
 
-  vue-router@4.5.0(vue@3.5.13(typescript@5.6.3)):
+  vue-router@4.5.1(vue@3.5.13(typescript@5.6.3)):
     dependencies:
       '@vue/devtools-api': 6.6.4
       vue: 3.5.13(typescript@5.6.3)
