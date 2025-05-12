@@ -23,8 +23,8 @@ updates:
           - "lodash*"
       vitest:
         patterns:
-        - "vitest"
-        - "@vitest/*"
+          - "vitest"
+          - "@vitest/*"
       types:
         patterns:
           - "@types*"
