@@ -1,5 +1,5 @@
-import { SUPPLIERS_ENDPOINT } from "@/internal/constants";
-import { type Supplier } from "@/types/supplier";
+import { SUPPLIERS_ENDPOINT } from '@/internal/constants';
+import { type Supplier } from '@/types/supplier';
 
 export async function getSuppliers(): Promise<Supplier[]> {
   try {
@@ -14,12 +14,19 @@ export async function getSuppliers(): Promise<Supplier[]> {
     console.error('Error fetching suppliers:', error);
     throw error;
   }
-};
+}
 
 export function validateSupplier(data: any): asserts data is Supplier {
-  if ("id" in data && "name" in data && "address" in data && "zip" in data && "city" in data && "country" in data) {
+  if (
+    'id' in data &&
+    'name' in data &&
+    'address' in data &&
+    'zip' in data &&
+    'city' in data &&
+    'country' in data
+  ) {
     return;
   }
 
-  throw new Error("Provided object is not a Supplier");
+  throw new Error('Provided object is not a Supplier');
 }
