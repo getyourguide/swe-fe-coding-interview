@@ -1,5 +1,5 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,9 +13,9 @@ const router = createRouter({
       path: '/activities/:type',
       name: 'activities',
       component: () => import('../views/ActivitiesView.vue'),
-      props: true
+      props: true,
     },
   ],
-})
+});
 
-export default router
+export default router;

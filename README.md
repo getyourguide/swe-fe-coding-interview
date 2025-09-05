@@ -16,15 +16,18 @@ Please note that you might need to refresh the Activities page a couple of times
 - Please ensure that the FULL project can be run in your local environment
 - ⚠️ **Make sure not to publish your work on this repository.** ⚠️
 
-
 ## Project Setup
+
 1. Install dependencies using npm
+
 ```sh
 npm install
 ```
 
 ### Compile and Hot-Reload for Development
+
 2. Make sure you are able to run dev mode of application without any compile/runtime errors
+
 ```sh
 npm run dev
 ```

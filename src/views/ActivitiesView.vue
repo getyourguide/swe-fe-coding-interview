@@ -20,7 +20,11 @@
         <p v-if="suppliersById[activity.supplierId]" class="supplier">
           <i>by</i> {{ suppliersById[activity.supplierId].name }}
         </p>
-        <p v-if="activity.discounts?.length">Price: <s>{{ activity.currency }}{{ activity.price }}</s> {{ activity.currency }}{{ calculateDiscountedPrice(activity.price, activity.discounts) }}</p>
+        <p v-if="activity.discounts?.length">
+          Price: <s>{{ activity.currency }}{{ activity.price }}</s>
+          {{ activity.currency
+          }}{{ calculateDiscountedPrice(activity.price, activity.discounts) }}
+        </p>
         <p v-else>Price: {{ activity.currency }}{{ activity.price }}</p>
         <p>Rating: {{ activity.rating }}</p>
         <p v-if="activity.specialOffer">Special Offer!</p>
@@ -37,10 +41,9 @@ import type { ActivitiesType, Activity } from '@/types/activity';
 import type { Supplier } from '@/types/supplier';
 import { calculateDiscountedPrice } from '@/utils/discount-calculator';
 
-
 type ActivitiesProps = {
   type: ActivitiesType;
-}
+};
 
 const props = defineProps<ActivitiesProps>();
 

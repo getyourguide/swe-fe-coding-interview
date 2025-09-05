@@ -4,4 +4,3 @@
  * as it changes frequently
  * */
 export const getTax = () => 0.07;
-

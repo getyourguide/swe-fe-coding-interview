@@ -1,12 +1,12 @@
-import type { Discount } from "./discount";
+import type { Discount } from './discount';
 
-export type ActivitiesType = "new" | "hot" | "offers";
+export type ActivitiesType = 'new' | 'hot' | 'offers';
 export interface Activity {
   id: number;
   title: string;
   image: string;
   price: 59;
-  currency: "$" | "€";
+  currency: '$' | '€';
   rating: number;
   specialOffer: boolean;
   supplierId: number;

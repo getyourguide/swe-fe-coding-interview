@@ -4,39 +4,39 @@ updates:
     directory: /
     schedule:
       interval: daily
-      time: "08:00"
+      time: '08:00'
       timezone: Europe/Berlin
     labels: []
     open-pull-requests-limit: 30
     ignore:
-      - dependency-name: "node"
-      - dependency-name: "@types/node"
-        update-types: ["version-update:semver-major"]
-      - dependency-name: "vuex"
-        update-types: ["version-update:semver-major"]
+      - dependency-name: 'node'
+      - dependency-name: '@types/node'
+        update-types: ['version-update:semver-major']
+      - dependency-name: 'vuex'
+        update-types: ['version-update:semver-major']
     groups:
       unhead:
         patterns:
-          - "@unhead*"
+          - '@unhead*'
       lodash:
         patterns:
-          - "lodash*"
+          - 'lodash*'
       vitest:
         patterns:
-          - "vitest"
-          - "@vitest/*"
+          - 'vitest'
+          - '@vitest/*'
       types:
         patterns:
-          - "@types*"
+          - '@types*'
         update-types:
-          - "patch"
+          - 'patch'
 
   - package-ecosystem: docker
     directory: /
     schedule:
       interval: weekly
     commit-message:
-      prefix: "[BUILD] "
+      prefix: '[BUILD] '
     open-pull-requests-limit: 10
 
   - package-ecosystem: github-actions

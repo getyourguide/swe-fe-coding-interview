@@ -1,14 +1,16 @@
 /**
  * DO NOT MODIFY
  * This file is a mock of the fetch function.
- * It is used to simulate network errors. 
+ * It is used to simulate network errors.
  * */
-import { NEW_ACTIVITIES_ENDPOINT } from "./constants";
+import { NEW_ACTIVITIES_ENDPOINT } from './constants';
 
 const F = window.fetch;
 
-export const fetchWrapper: typeof window.fetch = async (...args: Parameters<typeof fetch>): Promise<Response> => {
-  await new Promise(resolve => setTimeout(resolve, Math.random() * 1000));
+export const fetchWrapper: typeof window.fetch = async (
+  ...args: Parameters<typeof fetch>
+): Promise<Response> => {
+  await new Promise((resolve) => setTimeout(resolve, Math.random() * 1000));
 
   const res = await F(...args);
 
@@ -24,33 +26,31 @@ export const fetchWrapper: typeof window.fetch = async (...args: Parameters<type
 
   const mockResponse: Response = {
     ...res,
-    type: "error",
+    type: 'error',
     ok: false,
   };
-
 
   if (dieRoll > 0.3) {
     return {
       ...mockResponse,
       status: 500,
-      statusText: "500 Internal Server Error",
-    }
+      statusText: '500 Internal Server Error',
+    };
   }
 
   if (dieRoll > 0.2) {
     return {
       ...mockResponse,
       status: 403,
-      statusText: "403 Forbidden",
-    }
+      statusText: '403 Forbidden',
+    };
   }
 
   return {
     ...mockResponse,
     status: 404,
-    statusText: "404 Not Found"
-  }
+    statusText: '404 Not Found',
+  };
 };
 
 window.fetch = fetchWrapper;
-
