@@ -31,3 +31,9 @@ npm install
 ```sh
 npm run dev
 ```
+
+## Confidentiality Notice
+
+To ensure a fair and consistent recruitment process for all candidates, we ask that you keep these assessment materials confidential. Please do not share, publish, reproduce, or discuss the specific content of these materials publicly (including on social media, blogs, forums, or interview preparation platforms).
+
+You're welcome to discuss your general interview experience, but we appreciate your discretion regarding the specific questions and tasks. Thank you for helping us maintain the integrity of our hiring process.
